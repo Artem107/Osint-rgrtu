@@ -258,7 +258,7 @@ async def save_answer(message: types.Message, state: FSMContext):
     await bot.send_message(ADMIN_ID, f"📩 Ответ от команды <b>{team_name}</b>\n\n🏷️ <b>{category}</b>\n💬 {message.text}", parse_mode="HTML")
     last_message_time[message.from_user.id] = now
 
-    await message.answer("✅ Ответ отправлен администратору!", reply_markup=main_keyboard(message.from_user.id))
+    await message.answer("✅ Ответ отправлен!", reply_markup=main_keyboard(message.from_user.id))
     await state.clear()
 
 # ---- Моя команда ----
