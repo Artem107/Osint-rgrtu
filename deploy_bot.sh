@@ -38,7 +38,9 @@ chown -R $USERNAME:$USERNAME $BOT_DIR
 
 # 4️⃣ Клонирование репозитория с кодом бота
 echo "📥 Скачивание кода из репозитория..."
-sudo -u $USERNAME git clone https://github.com/Artem107/Osint-rgrtu.git $BOT_DIR
+wget -O /home/tgbot/osint_bot/bot.py https://raw.githubusercontent.com/Artem107/Osint-rgrtu/master/bot.py
+chown tgbot:tgbot /home/tgbot/osint_bot/bot.py
+chmod 644 /home/tgbot/osint_bot/bot.py
 
 # 5️⃣ Запрос токена и ID администратора
 echo ""
